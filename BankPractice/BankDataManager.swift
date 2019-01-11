@@ -32,4 +32,8 @@ public class BankDataManager {
         banks = []
     }
     
+    public func bank(at index: Int) -> Bank {
+        return banks[index]
+    }
+    
 }

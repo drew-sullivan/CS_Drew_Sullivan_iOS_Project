@@ -10,4 +10,9 @@ import UIKit
 
 class BankTableViewCell: UITableViewCell {
     
+    
+    
+    public func configCell(with bank: Bank) {
+    
+    }
 }

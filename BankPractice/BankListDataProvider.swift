@@ -17,7 +17,12 @@ class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return BankTableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BankTableViewCell", for: indexPath) as! BankTableViewCell
+        
+        if let bank = bankDataManager?.bank(at: indexPath.row) {
+            cell.configCell(with: bank)
+        }
+        return cell
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
