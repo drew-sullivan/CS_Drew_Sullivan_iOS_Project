@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Bank: Equatable {
+public struct Bank: Equatable, Codable {
     let name: String
     let amount: Double
     let ROI: Double

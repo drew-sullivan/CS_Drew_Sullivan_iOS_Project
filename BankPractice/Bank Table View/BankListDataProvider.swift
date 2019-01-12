@@ -19,9 +19,11 @@ class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BankTableViewCell", for: indexPath) as! BankTableViewCell
         
-        if let bank = bankDataManager?.bank(at: indexPath.row) {
-            cell.configCell(with: bank)
-        }
+        guard let bankDataManager = bankDataManager else { fatalError() }
+        
+        let bank = bankDataManager.bank(at: indexPath.row)
+        cell.configCell(with: bank)
+        
         return cell
     }
     
