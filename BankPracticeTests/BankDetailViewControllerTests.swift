@@ -25,7 +25,8 @@ class BankDetailViewControllerTests: XCTestCase {
         bank = Bank(isSample: true)
         let bankDataManager = BankDataManager.shared
         bankDataManager.add(bank)
-        sut.bank = bank
+        let bankDetailViewModel = BankDetailViewModel(bank: bank)
+        sut.bankDetailViewModel = bankDetailViewModel
         
         sut.beginAppearanceTransition(true, animated: true)
         sut.endAppearanceTransition()

@@ -10,17 +10,16 @@ import UIKit
 
 class BankDetailViewController: UIViewController {
     
-    var bank: Bank!
+    var bankDetailViewModel: BankDetailViewModel!
     
     @IBOutlet var roiLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        guard bank != nil else { return }
-        
-        roiLabel.text = "\(bank.ROI)"
-        roiLabel.textColor = UIColor.white
+        roiLabel.text = bankDetailViewModel.roi
+        roiLabel.textColor = bankDetailViewModel.textColor
+        view.backgroundColor = bankDetailViewModel.backgroundColorBasedOnROI
     }
     
 }
