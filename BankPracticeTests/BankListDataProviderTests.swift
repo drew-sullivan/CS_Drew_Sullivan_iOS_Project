@@ -23,7 +23,7 @@ class BankListDataProviderTests: XCTestCase {
         sut.bankDataManager = BankDataManager.shared
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        controller = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as! BankListViewController
+        controller = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as? BankListViewController
         
         controller.loadViewIfNeeded()
 

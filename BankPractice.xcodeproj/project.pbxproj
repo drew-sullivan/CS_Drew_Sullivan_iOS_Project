@@ -128,6 +128,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		3ACB9F4321EA812F00C0AA36 /* Data Management */ = {
+			isa = PBXGroup;
+			children = (
+				7CE0E83D21E9304100B44981 /* BankDataManager.swift */,
+			);
+			path = "Data Management";
+			sourceTree = "<group>";
+		};
 		7CE0E7F321E91F3900B44981 = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACB9F4021EA497000C0AA36 /* Networking */,
-				7CE0E83D21E9304100B44981 /* BankDataManager.swift */,
+				3ACB9F4321EA812F00C0AA36 /* Data Management */,
 				7CE0E83221E921E700B44981 /* Storyboards */,
 				7CE0E83121E921AA00B44981 /* Model */,
 				3A20D6BE21EA316E0018CC73 /* Bank Table View */,
