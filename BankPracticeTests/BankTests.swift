@@ -22,7 +22,7 @@ class BankTests: XCTestCase {
     
     func test_init_sets_expected_member_var() {
         let bank = Bank(isSample: true)
-        XCTAssertEqual(bank.name, "drew", "Names should be equal")
+        XCTAssertEqual(bank.name, "Foo Bank", "Names should be equal")
     }
 
 }

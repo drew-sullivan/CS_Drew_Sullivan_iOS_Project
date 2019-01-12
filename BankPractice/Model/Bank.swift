@@ -22,10 +22,10 @@ public struct Bank: Equatable {
     }
     
     init(isSample: Bool) {
-        self.name = "drew"
-        self.amount = Double.random(in: 0...3)
-        self.ROI = Double.random(in: 0...3)
-        self.id = Int.random(in: 1...100)
+        self.name = "Foo Bank"
+        self.amount = 100.0
+        self.ROI = 99.0
+        self.id = 1
     }
     
     public static func ==(lhs: Bank, rhs: Bank) -> Bool {

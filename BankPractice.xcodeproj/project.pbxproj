@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A20D6BD21EA2AC00018CC73 /* BankTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */; };
+		3A20D6C721EA33900018CC73 /* BankDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20D6C621EA33900018CC73 /* BankDetailViewControllerTests.swift */; };
+		3A20D6C921EA33A70018CC73 /* BankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20D6C821EA33A70018CC73 /* BankDetailViewController.swift */; };
+		3ACB9F3B21EA3F3600C0AA36 /* BankDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB9F3A21EA3F3600C0AA36 /* BankDetailViewModelTests.swift */; };
+		3ACB9F3D21EA40D100C0AA36 /* BankDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB9F3C21EA40D100C0AA36 /* BankDetailViewModel.swift */; };
 		7C5D9BE321E93BEB00A24621 /* BankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5D9BE221E93BEB00A24621 /* BankTableViewCell.swift */; };
 		7CBFA70521E93303007F49C0 /* BankDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0E83D21E9304100B44981 /* BankDataManager.swift */; };
 		7CBFA70921E93532007F49C0 /* BankListDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBFA70821E93532007F49C0 /* BankListDataProviderTests.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTableViewCellTests.swift; sourceTree = "<group>"; };
+		3A20D6C621EA33900018CC73 /* BankDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewControllerTests.swift; sourceTree = "<group>"; };
+		3A20D6C821EA33A70018CC73 /* BankDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewController.swift; sourceTree = "<group>"; };
+		3ACB9F3A21EA3F3600C0AA36 /* BankDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewModelTests.swift; sourceTree = "<group>"; };
+		3ACB9F3C21EA40D100C0AA36 /* BankDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewModel.swift; sourceTree = "<group>"; };
 		7C5D9BE221E93BEB00A24621 /* BankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTableViewCell.swift; sourceTree = "<group>"; };
 		7CBFA70821E93532007F49C0 /* BankListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankListDataProviderTests.swift; sourceTree = "<group>"; };
 		7CE0E7FC21E91F3900B44981 /* BankPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +96,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A20D6BE21EA316E0018CC73 /* Bank Table View */ = {
+			isa = PBXGroup;
+			children = (
+				7CE0E83521E922BD00B44981 /* BankListViewController.swift */,
+				7CE0E83921E92B9A00B44981 /* BankListDataProvider.swift */,
+				7C5D9BE221E93BEB00A24621 /* BankTableViewCell.swift */,
+				3A20D6C521EA32C80018CC73 /* Bank Details */,
+			);
+			path = "Bank Table View";
+			sourceTree = "<group>";
+		};
+		3A20D6C521EA32C80018CC73 /* Bank Details */ = {
+			isa = PBXGroup;
+			children = (
+				3A20D6C821EA33A70018CC73 /* BankDetailViewController.swift */,
+				3ACB9F3C21EA40D100C0AA36 /* BankDetailViewModel.swift */,
+			);
+			path = "Bank Details";
+			sourceTree = "<group>";
+		};
 		7CE0E7F321E91F3900B44981 = {
 			isa = PBXGroup;
 			children = (
@@ -110,14 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				7CE0E83D21E9304100B44981 /* BankDataManager.swift */,
-				7CE0E83921E92B9A00B44981 /* BankListDataProvider.swift */,
 				7CE0E83221E921E700B44981 /* Storyboards */,
 				7CE0E83121E921AA00B44981 /* Model */,
-				7CE0E83521E922BD00B44981 /* BankListViewController.swift */,
+				3A20D6BE21EA316E0018CC73 /* Bank Table View */,
 				7CE0E7FF21E91F3900B44981 /* AppDelegate.swift */,
 				7CE0E80621E91F3A00B44981 /* Assets.xcassets */,
 				7CE0E80B21E91F3A00B44981 /* Info.plist */,
-				7C5D9BE221E93BEB00A24621 /* BankTableViewCell.swift */,
 			);
 			path = BankPractice;
 			sourceTree = "<group>";
@@ -128,6 +156,9 @@
 				7CE0E82D21E91FC400B44981 /* BankTests.swift */,
 				7CE0E83321E9225300B44981 /* BankListViewControllerTests.swift */,
 				7CBFA70821E93532007F49C0 /* BankListDataProviderTests.swift */,
+				3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */,
+				3A20D6C621EA33900018CC73 /* BankDetailViewControllerTests.swift */,
+				3ACB9F3A21EA3F3600C0AA36 /* BankDetailViewModelTests.swift */,
 				7CE0E81621E91F3A00B44981 /* Info.plist */,
 			);
 			path = BankPracticeTests;
@@ -294,8 +325,10 @@
 				7CE0E83021E9200B00B44981 /* Bank.swift in Sources */,
 				7CBFA70521E93303007F49C0 /* BankDataManager.swift in Sources */,
 				7CE0E83A21E92B9A00B44981 /* BankListDataProvider.swift in Sources */,
+				3A20D6C921EA33A70018CC73 /* BankDetailViewController.swift in Sources */,
 				7CE0E80021E91F3900B44981 /* AppDelegate.swift in Sources */,
 				7C5D9BE321E93BEB00A24621 /* BankTableViewCell.swift in Sources */,
+				3ACB9F3D21EA40D100C0AA36 /* BankDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A20D6C721EA33900018CC73 /* BankDetailViewControllerTests.swift in Sources */,
+				3ACB9F3B21EA3F3600C0AA36 /* BankDetailViewModelTests.swift in Sources */,
 				7CBFA70921E93532007F49C0 /* BankListDataProviderTests.swift in Sources */,
+				3A20D6BD21EA2AC00018CC73 /* BankTableViewCellTests.swift in Sources */,
 				7CE0E83421E9225300B44981 /* BankListViewControllerTests.swift in Sources */,
 				7CE0E82E21E91FC400B44981 /* BankTests.swift in Sources */,
 			);
