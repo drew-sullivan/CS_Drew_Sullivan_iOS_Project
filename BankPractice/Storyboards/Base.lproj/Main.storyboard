@@ -46,8 +46,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="accountNameLabel" destination="lRa-U2-h11" id="stX-tb-dl8"/>
-                                            <outlet property="amountLabel" destination="zW4-4c-phV" id="3oE-ZJ-Art"/>
+                                            <outlet property="accountNameLabel" destination="lRa-U2-h11" id="vi9-S2-hl4"/>
+                                            <outlet property="amountLabel" destination="zW4-4c-phV" id="Ql7-8l-Vtz"/>
                                             <segue destination="hGL-4c-VPi" kind="show" identifier="BankDetailViewSegue" id="jMq-dH-Dle"/>
                                         </connections>
                                     </tableViewCell>

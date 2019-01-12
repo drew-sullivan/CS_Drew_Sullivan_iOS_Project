@@ -12,22 +12,23 @@ import XCTest
 
 class BankListDataProviderTests: XCTestCase {
     
-    var dataProvider: BankListDataProvider!
+    var controller: BankListViewController!
+    var sut: BankListDataProvider!
     var tableView: UITableView!
 
     override func setUp() {
         super.setUp()
         
-        dataProvider = BankListDataProvider()
-        dataProvider.bankDataManager = BankDataManager.shared
+        sut = BankListDataProvider()
+        sut.bankDataManager = BankDataManager.shared
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as! BankListViewController
+        controller = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as! BankListViewController
         
-        vc.loadViewIfNeeded()
+        controller.loadViewIfNeeded()
 
-        tableView = vc.tableView
-        tableView.dataSource = dataProvider
+        tableView = controller.tableView
+        tableView.dataSource = sut
     }
 
     override func tearDown() {
@@ -41,17 +42,17 @@ class BankListDataProviderTests: XCTestCase {
     }
     
     func test_number_of_rows_in_section_one_is_equal_to_num_banks() {
-        dataProvider.bankDataManager?.add(Bank(isSample: true))
+        sut.bankDataManager?.add(Bank(isSample: true))
         tableView.reloadData()
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
         
-        dataProvider.bankDataManager?.add(Bank(isSample: true))
+        sut.bankDataManager?.add(Bank(isSample: true))
         tableView.reloadData()
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 2)
     }
     
     func test_cell_for_row_at_returns_bank_cell() {
-        dataProvider.bankDataManager?.add(Bank(isSample: true))
+        sut.bankDataManager?.add(Bank(isSample: true))
         tableView.reloadData()
         
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
@@ -60,24 +61,24 @@ class BankListDataProviderTests: XCTestCase {
     
     func test_cell_for_row_dequeues_cell_from_table_view() {
         let mockTableView = MockTableView()
-        mockTableView.dataSource = dataProvider
-        mockTableView.register(BankTableViewCell.self, forCellReuseIdentifier: "BankTableViewCell")
-        
-        dataProvider.bankDataManager?.add(Bank(isSample: true))
+        mockTableView.dataSource = sut
+        mockTableView.register(MockBankCell.self, forCellReuseIdentifier: "BankTableViewCell")
+
+        sut.bankDataManager?.add(Bank(isSample: true))
         mockTableView.reloadData()
-        
-        _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
-        
+
+        let _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
+
         XCTAssertTrue(mockTableView.cellWasDequeued)
     }
     
     func test_cell_for_row_at_calls_config_cell() {
         let mockTableView = MockTableView()
-        mockTableView.dataSource = dataProvider
+        mockTableView.dataSource = sut
         mockTableView.register(MockBankCell.self, forCellReuseIdentifier: "BankTableViewCell")
         
         let bank = Bank(isSample: true)
-        dataProvider.bankDataManager?.add(bank)
+        sut.bankDataManager?.add(bank)
         mockTableView.reloadData()
         
         let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MockBankCell
