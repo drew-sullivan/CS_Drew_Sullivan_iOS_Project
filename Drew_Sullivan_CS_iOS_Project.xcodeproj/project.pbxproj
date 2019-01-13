@@ -62,15 +62,15 @@
 		3AD96C1521EB7766008C06DC /* StoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardTests.swift; sourceTree = "<group>"; };
 		7C5D9BE221E93BEB00A24621 /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		7CBFA70821E93532007F49C0 /* AccountListDataProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListDataProviderTests.swift; sourceTree = "<group>"; };
-		7CE0E7FC21E91F3900B44981 /* BankPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE0E7FC21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drew_Sullivan_CS_iOS_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE0E7FF21E91F3900B44981 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CE0E80421E91F3900B44981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CE0E80621E91F3A00B44981 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CE0E80921E91F3A00B44981 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CE0E80B21E91F3A00B44981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7CE0E81021E91F3A00B44981 /* BankPracticeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankPracticeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE0E81021E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Drew_Sullivan_CS_iOS_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE0E81621E91F3A00B44981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7CE0E81B21E91F3A00B44981 /* BankPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CE0E81B21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Drew_Sullivan_CS_iOS_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE0E81F21E91F3A00B44981 /* AccountPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPracticeUITests.swift; sourceTree = "<group>"; };
 		7CE0E82121E91F3B00B44981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CE0E82D21E91FC400B44981 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
@@ -199,9 +199,9 @@
 		7CE0E7FD21E91F3900B44981 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7CE0E7FC21E91F3900B44981 /* BankPractice.app */,
-				7CE0E81021E91F3A00B44981 /* BankPracticeTests.xctest */,
-				7CE0E81B21E91F3A00B44981 /* BankPracticeUITests.xctest */,
+				7CE0E7FC21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project.app */,
+				7CE0E81021E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectTests.xctest */,
+				7CE0E81B21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7CE0E7FB21E91F3900B44981 /* BankPractice */ = {
+		7CE0E7FB21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CE0E82421E91F3B00B44981 /* Build configuration list for PBXNativeTarget "BankPractice" */;
+			buildConfigurationList = 7CE0E82421E91F3B00B44981 /* Build configuration list for PBXNativeTarget "Drew_Sullivan_CS_iOS_Project" */;
 			buildPhases = (
 				7CE0E7F821E91F3900B44981 /* Sources */,
 				7CE0E7F921E91F3900B44981 /* Frameworks */,
@@ -276,14 +276,14 @@
 			);
 			dependencies = (
 			);
-			name = BankPractice;
+			name = Drew_Sullivan_CS_iOS_Project;
 			productName = BankPractice;
-			productReference = 7CE0E7FC21E91F3900B44981 /* BankPractice.app */;
+			productReference = 7CE0E7FC21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7CE0E80F21E91F3A00B44981 /* BankPracticeTests */ = {
+		7CE0E80F21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CE0E82721E91F3B00B44981 /* Build configuration list for PBXNativeTarget "BankPracticeTests" */;
+			buildConfigurationList = 7CE0E82721E91F3B00B44981 /* Build configuration list for PBXNativeTarget "Drew_Sullivan_CS_iOS_ProjectTests" */;
 			buildPhases = (
 				7CE0E80C21E91F3A00B44981 /* Sources */,
 				7CE0E80D21E91F3A00B44981 /* Frameworks */,
@@ -294,14 +294,14 @@
 			dependencies = (
 				7CE0E81221E91F3A00B44981 /* PBXTargetDependency */,
 			);
-			name = BankPracticeTests;
+			name = Drew_Sullivan_CS_iOS_ProjectTests;
 			productName = BankPracticeTests;
-			productReference = 7CE0E81021E91F3A00B44981 /* BankPracticeTests.xctest */;
+			productReference = 7CE0E81021E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7CE0E81A21E91F3A00B44981 /* BankPracticeUITests */ = {
+		7CE0E81A21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7CE0E82A21E91F3B00B44981 /* Build configuration list for PBXNativeTarget "BankPracticeUITests" */;
+			buildConfigurationList = 7CE0E82A21E91F3B00B44981 /* Build configuration list for PBXNativeTarget "Drew_Sullivan_CS_iOS_ProjectUITests" */;
 			buildPhases = (
 				7CE0E81721E91F3A00B44981 /* Sources */,
 				7CE0E81821E91F3A00B44981 /* Frameworks */,
@@ -312,9 +312,9 @@
 			dependencies = (
 				7CE0E81D21E91F3A00B44981 /* PBXTargetDependency */,
 			);
-			name = BankPracticeUITests;
+			name = Drew_Sullivan_CS_iOS_ProjectUITests;
 			productName = BankPracticeUITests;
-			productReference = 7CE0E81B21E91F3A00B44981 /* BankPracticeUITests.xctest */;
+			productReference = 7CE0E81B21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -340,7 +340,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7CE0E7F721E91F3900B44981 /* Build configuration list for PBXProject "BankPractice" */;
+			buildConfigurationList = 7CE0E7F721E91F3900B44981 /* Build configuration list for PBXProject "Drew_Sullivan_CS_iOS_Project" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -353,9 +353,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7CE0E7FB21E91F3900B44981 /* BankPractice */,
-				7CE0E80F21E91F3A00B44981 /* BankPracticeTests */,
-				7CE0E81A21E91F3A00B44981 /* BankPracticeUITests */,
+				7CE0E7FB21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project */,
+				7CE0E80F21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectTests */,
+				7CE0E81A21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -434,12 +434,12 @@
 /* Begin PBXTargetDependency section */
 		7CE0E81221E91F3A00B44981 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7CE0E7FB21E91F3900B44981 /* BankPractice */;
+			target = 7CE0E7FB21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project */;
 			targetProxy = 7CE0E81121E91F3A00B44981 /* PBXContainerItemProxy */;
 		};
 		7CE0E81D21E91F3A00B44981 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7CE0E7FB21E91F3900B44981 /* BankPractice */;
+			target = 7CE0E7FB21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project */;
 			targetProxy = 7CE0E81C21E91F3A00B44981 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -633,7 +633,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankPractice.app/BankPractice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drew_Sullivan_CS_iOS_Project.app/Drew_Sullivan_CS_iOS_Project";
 			};
 			name = Debug;
 		};
@@ -654,7 +654,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BankPractice.app/BankPractice";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Drew_Sullivan_CS_iOS_Project.app/Drew_Sullivan_CS_iOS_Project";
 			};
 			name = Release;
 		};
@@ -701,7 +701,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7CE0E7F721E91F3900B44981 /* Build configuration list for PBXProject "BankPractice" */ = {
+		7CE0E7F721E91F3900B44981 /* Build configuration list for PBXProject "Drew_Sullivan_CS_iOS_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CE0E82221E91F3B00B44981 /* Debug */,
@@ -710,7 +710,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CE0E82421E91F3B00B44981 /* Build configuration list for PBXNativeTarget "BankPractice" */ = {
+		7CE0E82421E91F3B00B44981 /* Build configuration list for PBXNativeTarget "Drew_Sullivan_CS_iOS_Project" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CE0E82521E91F3B00B44981 /* Debug */,
@@ -719,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CE0E82721E91F3B00B44981 /* Build configuration list for PBXNativeTarget "BankPracticeTests" */ = {
+		7CE0E82721E91F3B00B44981 /* Build configuration list for PBXNativeTarget "Drew_Sullivan_CS_iOS_ProjectTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CE0E82821E91F3B00B44981 /* Debug */,
@@ -728,7 +728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7CE0E82A21E91F3B00B44981 /* Build configuration list for PBXNativeTarget "BankPracticeUITests" */ = {
+		7CE0E82A21E91F3B00B44981 /* Build configuration list for PBXNativeTarget "Drew_Sullivan_CS_iOS_ProjectUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7CE0E82B21E91F3B00B44981 /* Debug */,
