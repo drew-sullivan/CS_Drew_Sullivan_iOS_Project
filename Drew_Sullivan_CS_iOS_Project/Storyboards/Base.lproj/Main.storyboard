@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Account List View Controller-->
+        <!--Accounts-->
         <scene sceneID="HWA-eJ-WpT">
             <objects>
-                <viewController storyboardIdentifier="AccountListViewController" id="t8Z-ec-QFZ" customClass="AccountListViewController" customModule="BankPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountListViewController" id="t8Z-ec-QFZ" customClass="AccountListViewController" customModule="Drew_Sullivan_CS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qj8-fJ-Gfd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AccountTableViewCell" rowHeight="65" id="4qD-81-i9r" customClass="AccountTableViewCell" customModule="BankPractice" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AccountTableViewCell" rowHeight="65" id="4qD-81-i9r" customClass="AccountTableViewCell" customModule="Drew_Sullivan_CS_iOS_Project" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4qD-81-i9r" id="mK8-do-NyO">
@@ -70,21 +70,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WUV-pR-kME"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hFG-CC-r74"/>
+                    <navigationItem key="navigationItem" title="Accounts" id="hFG-CC-r74"/>
                     <connections>
                         <outlet property="dataProvider" destination="KnQ-Xa-9hj" id="k4C-Hs-Nm6"/>
                         <outlet property="tableView" destination="CgH-hS-tut" id="PSC-A4-1gs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdg-3Q-HKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="KnQ-Xa-9hj" customClass="AccountListDataProvider" customModule="BankPractice" customModuleProvider="target"/>
+                <customObject id="KnQ-Xa-9hj" customClass="AccountListDataProvider" customModule="Drew_Sullivan_CS_iOS_Project" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1149.5999999999999" y="124.58770614692655"/>
         </scene>
         <!--Account Detail View Controller-->
         <scene sceneID="M2I-W5-Fmq">
             <objects>
-                <viewController storyboardIdentifier="AccountDetailViewController" id="hGL-4c-VPi" customClass="AccountDetailViewController" customModule="BankPractice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountDetailViewController" id="hGL-4c-VPi" customClass="AccountDetailViewController" customModule="Drew_Sullivan_CS_iOS_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wNz-Oo-REt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
