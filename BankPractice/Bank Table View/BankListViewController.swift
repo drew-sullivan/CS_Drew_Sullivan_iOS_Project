@@ -27,11 +27,9 @@ class BankListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        bankDataManager.fetchBankData { (isDone) in
-            if isDone {
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
+        bankDataManager.fetchBankData { (dataIsLoaded) in
+            if dataIsLoaded {
+                self.tableView.reloadData()
             }
         }
         

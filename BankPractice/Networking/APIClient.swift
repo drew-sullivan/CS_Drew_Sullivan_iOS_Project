@@ -29,7 +29,9 @@ class APIClient {
             
             do {
                 let banks: [Bank] = try JSONDecoder().decode([Bank].self, from: data)
-                completion(banks, nil)
+                OperationQueue.main.addOperation {
+                    completion(banks, nil)
+                }
             } catch {
                 completion(nil, error)
             }
