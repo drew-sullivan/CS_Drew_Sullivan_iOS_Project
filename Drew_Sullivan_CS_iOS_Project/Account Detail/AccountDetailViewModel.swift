@@ -11,11 +11,14 @@ import UIKit
 class AccountDetailViewModel {
     
     private let account: Account
-    
     public var textColor = UIColor.white
     
     public init(account: Account) {
         self.account = account
+    }
+    
+    public var title: String {
+        return account.name
     }
     
     public var roi: String {

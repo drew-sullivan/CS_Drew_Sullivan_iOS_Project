@@ -17,6 +17,7 @@ class AccountDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.title = accountDetailViewModel.title
         roiLabel.text = accountDetailViewModel.roi
         roiLabel.textColor = accountDetailViewModel.textColor
         view.backgroundColor = accountDetailViewModel.backgroundColorBasedOnROI
