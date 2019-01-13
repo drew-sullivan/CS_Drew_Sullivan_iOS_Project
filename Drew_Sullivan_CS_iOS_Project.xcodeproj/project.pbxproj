@@ -26,7 +26,7 @@
 		7CE0E80521E91F3900B44981 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE0E80321E91F3900B44981 /* Main.storyboard */; };
 		7CE0E80721E91F3A00B44981 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CE0E80621E91F3A00B44981 /* Assets.xcassets */; };
 		7CE0E80A21E91F3A00B44981 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CE0E80821E91F3A00B44981 /* LaunchScreen.storyboard */; };
-		7CE0E82021E91F3A00B44981 /* AccountPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0E81F21E91F3A00B44981 /* AccountPracticeUITests.swift */; };
+		7CE0E82021E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0E81F21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.swift */; };
 		7CE0E83021E9200B00B44981 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0E82F21E9200B00B44981 /* Account.swift */; };
 		7CE0E83621E922BD00B44981 /* AccountListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0E83521E922BD00B44981 /* AccountListViewController.swift */; };
 		7CE0E83A21E92B9A00B44981 /* AccountListDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0E83921E92B9A00B44981 /* AccountListDataProvider.swift */; };
@@ -71,7 +71,7 @@
 		7CE0E81021E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Drew_Sullivan_CS_iOS_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CE0E81621E91F3A00B44981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CE0E81B21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Drew_Sullivan_CS_iOS_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CE0E81F21E91F3A00B44981 /* AccountPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPracticeUITests.swift; sourceTree = "<group>"; };
+		7CE0E81F21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drew_Sullivan_CS_iOS_ProjectUITests.swift; sourceTree = "<group>"; };
 		7CE0E82121E91F3B00B44981 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7CE0E82D21E91FC400B44981 /* AccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTests.swift; sourceTree = "<group>"; };
 		7CE0E82F21E9200B00B44981 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
@@ -142,7 +142,7 @@
 			path = "Data Management";
 			sourceTree = "<group>";
 		};
-		3AE6138221EB7E0200713A90 /* Bank Table View Tests */ = {
+		3AE6138221EB7E0200713A90 /* AccountTableView Tests */ = {
 			isa = PBXGroup;
 			children = (
 				7CE0E83321E9225300B44981 /* AccountListViewControllerTests.swift */,
@@ -150,7 +150,7 @@
 				3A20D6BC21EA2AC00018CC73 /* AccountTableViewCellTests.swift */,
 				3A3BAC9421EBB7A400BA062D /* AccountCellViewModelTests.swift */,
 			);
-			path = "Bank Table View Tests";
+			path = "AccountTableView Tests";
 			sourceTree = "<group>";
 		};
 		3AE6138321EB7E1700713A90 /* Model Tests */ = {
@@ -161,13 +161,13 @@
 			path = "Model Tests";
 			sourceTree = "<group>";
 		};
-		3AE6138421EB7E3100713A90 /* Bank Detail Tests */ = {
+		3AE6138421EB7E3100713A90 /* AccountDetail Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3A20D6C621EA33900018CC73 /* AccountDetailViewControllerTests.swift */,
 				3ACB9F3A21EA3F3600C0AA36 /* AccountDetailViewModelTests.swift */,
 			);
-			path = "Bank Detail Tests";
+			path = "AccountDetail Tests";
 			sourceTree = "<group>";
 		};
 		3AE6138521EB7E5000713A90 /* Networking Tests */ = {
@@ -189,9 +189,9 @@
 		7CE0E7F321E91F3900B44981 = {
 			isa = PBXGroup;
 			children = (
-				7CE0E7FE21E91F3900B44981 /* BankPractice */,
-				7CE0E81321E91F3A00B44981 /* BankPracticeTests */,
-				7CE0E81E21E91F3A00B44981 /* BankPracticeUITests */,
+				7CE0E7FE21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project */,
+				7CE0E81321E91F3A00B44981 /* Drew_Sullivan_CS_iOS_Project_Tests */,
+				7CE0E81E21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_Project_UITests */,
 				7CE0E7FD21E91F3900B44981 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -206,7 +206,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7CE0E7FE21E91F3900B44981 /* BankPractice */ = {
+		7CE0E7FE21E91F3900B44981 /* Drew_Sullivan_CS_iOS_Project */ = {
 			isa = PBXGroup;
 			children = (
 				3ACB9F4021EA497000C0AA36 /* Networking */,
@@ -219,29 +219,29 @@
 				7CE0E80621E91F3A00B44981 /* Assets.xcassets */,
 				7CE0E80B21E91F3A00B44981 /* Info.plist */,
 			);
-			path = BankPractice;
+			path = Drew_Sullivan_CS_iOS_Project;
 			sourceTree = "<group>";
 		};
-		7CE0E81321E91F3A00B44981 /* BankPracticeTests */ = {
+		7CE0E81321E91F3A00B44981 /* Drew_Sullivan_CS_iOS_Project_Tests */ = {
 			isa = PBXGroup;
 			children = (
 				3AE6138321EB7E1700713A90 /* Model Tests */,
-				3AE6138221EB7E0200713A90 /* Bank Table View Tests */,
-				3AE6138421EB7E3100713A90 /* Bank Detail Tests */,
+				3AE6138221EB7E0200713A90 /* AccountTableView Tests */,
+				3AE6138421EB7E3100713A90 /* AccountDetail Tests */,
 				3AE6138521EB7E5000713A90 /* Networking Tests */,
 				3AE6138621EB7E5700713A90 /* Storyboard Tests */,
 				7CE0E81621E91F3A00B44981 /* Info.plist */,
 			);
-			path = BankPracticeTests;
+			path = Drew_Sullivan_CS_iOS_Project_Tests;
 			sourceTree = "<group>";
 		};
-		7CE0E81E21E91F3A00B44981 /* BankPracticeUITests */ = {
+		7CE0E81E21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_Project_UITests */ = {
 			isa = PBXGroup;
 			children = (
-				7CE0E81F21E91F3A00B44981 /* AccountPracticeUITests.swift */,
+				7CE0E81F21E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.swift */,
 				7CE0E82121E91F3B00B44981 /* Info.plist */,
 			);
-			path = BankPracticeUITests;
+			path = Drew_Sullivan_CS_iOS_Project_UITests;
 			sourceTree = "<group>";
 		};
 		7CE0E83121E921AA00B44981 /* Model */ = {
@@ -425,7 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CE0E82021E91F3A00B44981 /* AccountPracticeUITests.swift in Sources */,
+				7CE0E82021E91F3A00B44981 /* Drew_Sullivan_CS_iOS_ProjectUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,12 +586,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JKMQ4CU85;
-				INFOPLIST_FILE = BankPractice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Drew_Sullivan_CS_iOS_Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.drewsullivandma.BankPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewsullivandma.Drew-Sullivan-CS-iOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -604,12 +604,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JKMQ4CU85;
-				INFOPLIST_FILE = BankPractice/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Drew_Sullivan_CS_iOS_Project/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.drewsullivandma.BankPractice;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.drewsullivandma.Drew-Sullivan-CS-iOS-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -623,7 +623,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JKMQ4CU85;
-				INFOPLIST_FILE = BankPracticeTests/Info.plist;
+				INFOPLIST_FILE = Drew_Sullivan_CS_iOS_Project_Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -644,7 +644,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JKMQ4CU85;
-				INFOPLIST_FILE = BankPracticeTests/Info.plist;
+				INFOPLIST_FILE = Drew_Sullivan_CS_iOS_Project_Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,7 +664,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JKMQ4CU85;
-				INFOPLIST_FILE = BankPracticeUITests/Info.plist;
+				INFOPLIST_FILE = Drew_Sullivan_CS_iOS_Project_UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -685,7 +685,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JKMQ4CU85;
-				INFOPLIST_FILE = BankPracticeUITests/Info.plist;
+				INFOPLIST_FILE = Drew_Sullivan_CS_iOS_Project_UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
