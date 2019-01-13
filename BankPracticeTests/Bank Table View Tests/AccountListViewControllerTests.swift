@@ -10,15 +10,15 @@ import XCTest
 
 @testable import BankPractice
 
-class BankListViewControllerTests: XCTestCase {
+class AccountListViewControllerTests: XCTestCase {
     
-    var sut: BankListViewController!
+    var sut: AccountListViewController!
 
     override func setUp() {
         super.setUp()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        sut = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as? BankListViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "AccountListViewController") as? AccountListViewController
         sut.loadViewIfNeeded()
     }
 
@@ -35,23 +35,23 @@ class BankListViewControllerTests: XCTestCase {
     }
     
     func test_loading_view_sets_table_view_data_source() {
-        XCTAssertTrue(sut.tableView.dataSource is BankListDataProvider)
+        XCTAssertTrue(sut.tableView.dataSource is AccountListDataProvider)
     }
     
     func test_loading_view_sets_tableView_delegate() {
-        XCTAssertTrue(sut.tableView.delegate is BankListDataProvider)
+        XCTAssertTrue(sut.tableView.delegate is AccountListDataProvider)
     }
     
     func test_loading_view_data_source_is_delegate() {
-        XCTAssertEqual(sut.tableView.delegate as? BankListDataProvider, sut.tableView.dataSource as? BankListDataProvider)
+        XCTAssertEqual(sut.tableView.delegate as? AccountListDataProvider, sut.tableView.dataSource as? AccountListDataProvider)
     }
     
-    func test_view_did_load_sets_bank_data_manager_to_data_provider() {
-        XCTAssertTrue(sut.bankDataManager === sut.dataProvider.bankDataManager)
+    func test_view_did_load_sets_account_data_manager_to_data_provider() {
+        XCTAssertTrue(sut.accountDataManager === sut.dataProvider.accountDataManager)
     }
 }
 
-extension BankListViewControllerTests {
+extension AccountListViewControllerTests {
     
     class MockNavigationController: UINavigationController {
         var lastPushedController: UIViewController?

@@ -8,12 +8,12 @@
 
 import UIKit
 
-class BankListViewController: UIViewController {
+class AccountListViewController: UIViewController {
     
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate & BankDataManagerSettable)!
+    @IBOutlet var dataProvider: (UITableViewDataSource & UITableViewDelegate & AccountDataManagerSettable)!
     
-    let bankDataManager = BankDataManager.shared
+    let accountDataManager = AccountDataManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class BankListViewController: UIViewController {
         tableView.dataSource = dataProvider
         tableView.delegate = dataProvider
         
-        dataProvider.bankDataManager = bankDataManager
+        dataProvider.accountDataManager = accountDataManager
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
@@ -30,7 +30,7 @@ class BankListViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        bankDataManager.fetchBankData { (dataIsLoaded) in
+        accountDataManager.fetchAccountDataFromAPI { (dataIsLoaded) in
             if dataIsLoaded {
                 self.tableView.reloadData()
             }
@@ -40,12 +40,12 @@ class BankListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case "BankDetailViewSegue"?:
+        case "AccountDetailViewSegue"?:
             if let row = tableView.indexPathForSelectedRow?.row {
-                if let bank = dataProvider.bankDataManager?.bank(at: row) {
-                    let bankDetailViewModel = BankDetailViewModel(bank: bank)
-                    let bankDetailViewController = segue.destination as! BankDetailViewController
-                    bankDetailViewController.bankDetailViewModel = bankDetailViewModel
+                if let account = dataProvider.accountDataManager?.account(at: row) {
+                    let accountDetailViewModel = AccountDetailViewModel(account: account)
+                    let accountDetailViewController = segue.destination as! AccountDetailViewController
+                    accountDetailViewController.accountDetailViewModel = accountDetailViewModel
                 }
             }
         default:

@@ -10,23 +10,23 @@ import XCTest
 
 @testable import BankPractice
 
-class BankDetailViewControllerTests: XCTestCase {
+class AccountDetailViewControllerTests: XCTestCase {
     
-    var sut: BankDetailViewController!
-    var bank: Bank!
+    var sut: AccountDetailViewController!
+    var account: Account!
 
     override func setUp() {
         super.setUp()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        sut = storyboard.instantiateViewController(withIdentifier: "BankDetailViewController") as? BankDetailViewController
+        sut = storyboard.instantiateViewController(withIdentifier: "AccountDetailViewController") as? AccountDetailViewController
         sut.loadViewIfNeeded()
         
-        bank = Bank(isSample: true)
-        let bankDataManager = BankDataManager.shared
-        bankDataManager.add(bank)
-        let bankDetailViewModel = BankDetailViewModel(bank: bank)
-        sut.bankDetailViewModel = bankDetailViewModel
+        account = Account(isSample: true)
+        let accountDataManager = AccountDataManager.shared
+        accountDataManager.add(account)
+        let accountDetailViewModel = AccountDetailViewModel(account: account)
+        sut.accountDetailViewModel = accountDetailViewModel
         
         sut.beginAppearanceTransition(true, animated: true)
         sut.endAppearanceTransition()
@@ -40,8 +40,8 @@ class BankDetailViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.roiLabel.isDescendant(of: sut.view))
     }
     
-    func test_setting_bank_info_sets_label_text() {
-       XCTAssertEqual(sut.roiLabel.text, "\(bank.ROI)")
+    func test_setting_account_info_sets_label_text() {
+       XCTAssertEqual(sut.roiLabel.text, "\(account.ROI)")
     }
 
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Bank: Equatable, Codable {
+public struct Account: Equatable, Codable {
     let name: String
     let amount: Double
     let ROI: Double
@@ -22,13 +22,13 @@ public struct Bank: Equatable, Codable {
     }
     
     init(isSample: Bool) {
-        self.name = "Foo Bank"
+        self.name = "Foo Account"
         self.amount = 100.0
         self.ROI = 99.0
         self.id = 1
     }
     
-    public static func ==(lhs: Bank, rhs: Bank) -> Bool {
+    public static func ==(lhs: Account, rhs: Account) -> Bool {
         return lhs.id == rhs.id
     }
 }

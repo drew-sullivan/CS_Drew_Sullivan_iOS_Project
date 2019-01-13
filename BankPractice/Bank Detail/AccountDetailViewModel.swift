@@ -8,21 +8,22 @@
 
 import UIKit
 
-class BankDetailViewModel {
-    private let bank: Bank
+class AccountDetailViewModel {
+    
+    private let account: Account
     
     public var textColor = UIColor.white
     
-    public init(bank: Bank) {
-        self.bank = bank
+    public init(account: Account) {
+        self.account = account
     }
     
     public var roi: String {
-        return "\(bank.ROI)"
+        return "\(account.ROI)"
     }
     
     public var backgroundColorBasedOnROI: UIColor {
-        let roi = bank.ROI
+        let roi = account.ROI
         if roi > 0.0 {
             return UIColor.green
         } else {

@@ -8,22 +8,22 @@
 
 import UIKit
 
-class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate, BankDataManagerSettable {
+class AccountListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate, AccountDataManagerSettable {
     
-    public var bankDataManager: BankDataManager?
+    public var accountDataManager: AccountDataManager?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return bankDataManager?.numBanks ?? 0
+        return accountDataManager?.numAccounts ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BankTableViewCell", for: indexPath) as! BankTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AccountTableViewCell", for: indexPath) as! AccountTableViewCell
         
-        guard let bankDataManager = bankDataManager else { fatalError() }
+        guard let accountDataManager = accountDataManager else { fatalError() }
         
-        let bank = bankDataManager.bank(at: indexPath.row)
-        cell.configCell(with: bank)
+        let account = accountDataManager.account(at: indexPath.row)
+        cell.configCell(with: account)
         
         cell.preservesSuperviewLayoutMargins = false
         cell.separatorInset = UIEdgeInsets.zero
@@ -37,11 +37,11 @@ class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        NotificationCenter.default.post(name: NSNotification.Name("BankSelectedNotification"), object: self, userInfo: ["index": indexPath.row])
+        NotificationCenter.default.post(name: NSNotification.Name("AccountSelectedNotification"), object: self, userInfo: ["index": indexPath.row])
     }
     
 }
 
-@objc protocol BankDataManagerSettable {
-    var bankDataManager: BankDataManager? { get set }
+@objc protocol AccountDataManagerSettable {
+    var accountDataManager: AccountDataManager? { get set }
 }

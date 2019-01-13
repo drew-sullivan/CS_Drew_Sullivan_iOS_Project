@@ -12,7 +12,7 @@ class APIClient {
     
     lazy var session: SessionProtocol = URLSession.shared
     
-    func fetchBankData(with requestedData: RequestedData, completion: @escaping ([Bank]?, Error?) -> Void) {
+    func fetchAccountData(with requestedData: RequestedData, completion: @escaping ([Account]?, Error?) -> Void) {
         guard let url = URL(string: "https://glacial-bayou-77287.herokuapp.com/\(requestedData)") else {
             fatalError()
         }
@@ -28,9 +28,9 @@ class APIClient {
             }
             
             do {
-                let banks: [Bank] = try JSONDecoder().decode([Bank].self, from: data)
+                let accounts: [Account] = try JSONDecoder().decode([Account].self, from: data)
                 OperationQueue.main.addOperation {
-                    completion(banks, nil)
+                    completion(accounts, nil)
                 }
             } catch {
                 completion(nil, error)

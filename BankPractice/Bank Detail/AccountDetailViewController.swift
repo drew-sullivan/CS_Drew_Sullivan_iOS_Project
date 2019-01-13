@@ -8,18 +8,18 @@
 
 import UIKit
 
-class BankDetailViewController: UIViewController {
+class AccountDetailViewController: UIViewController {
     
-    var bankDetailViewModel: BankDetailViewModel!
+    var accountDetailViewModel: AccountDetailViewModel!
     
     @IBOutlet var roiLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        roiLabel.text = bankDetailViewModel.roi
-        roiLabel.textColor = bankDetailViewModel.textColor
-        view.backgroundColor = bankDetailViewModel.backgroundColorBasedOnROI
+        roiLabel.text = accountDetailViewModel.roi
+        roiLabel.textColor = accountDetailViewModel.textColor
+        view.backgroundColor = accountDetailViewModel.backgroundColorBasedOnROI
     }
     
 }

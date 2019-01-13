@@ -20,12 +20,12 @@ class StoryboardTests: XCTestCase {
         super.tearDown()
     }
     
-    func test_initial_view_controller_is_bank_table_view_controller() {
+    func test_initial_view_controller_is_account_table_view_controller() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let navigationController = storyboard.instantiateInitialViewController() as! UINavigationController
         let rootViewController = navigationController.viewControllers[0]
         
-        XCTAssertTrue(rootViewController is BankListViewController)
+        XCTAssertTrue(rootViewController is AccountListViewController)
     }
 
 }

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class BankTableViewCell: UITableViewCell {
+class AccountTableViewCell: UITableViewCell {
     
     @IBOutlet var accountNameLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
         
-    func configCell(with bank: Bank) {
-        let bankCellViewModel = BankCellViewModel(bank: bank)
-        accountNameLabel.text = bank.name
-        amountLabel.text = bankCellViewModel.formattedAmount
+    func configCell(with account: Account) {
+        let accountCellViewModel = AccountCellViewModel(account: account)
+        accountNameLabel.text = account.name
+        amountLabel.text = accountCellViewModel.formattedAmount
     }
 }

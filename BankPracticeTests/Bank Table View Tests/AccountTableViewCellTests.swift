@@ -10,15 +10,15 @@ import XCTest
 
 @testable import BankPractice
 
-class BankTableViewCellTests: XCTestCase {
+class AccountTableViewCellTests: XCTestCase {
     
-    var cell: BankTableViewCell!
+    var cell: AccountTableViewCell!
 
     override func setUp() {
         super.setUp()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as! BankListViewController
+        let controller = storyboard.instantiateViewController(withIdentifier: "AccountListViewController") as! AccountListViewController
         
         controller.loadViewIfNeeded()
         
@@ -26,7 +26,7 @@ class BankTableViewCellTests: XCTestCase {
         let dataSource = FakeDataSource()
         tableView?.dataSource = dataSource
         
-        cell = tableView?.dequeueReusableCell(withIdentifier: "BankTableViewCell", for: IndexPath(row: 0, section: 0)) as? BankTableViewCell
+        cell = tableView?.dequeueReusableCell(withIdentifier: "AccountTableViewCell", for: IndexPath(row: 0, section: 0)) as? AccountTableViewCell
     }
 
     override func tearDown() {
@@ -42,18 +42,18 @@ class BankTableViewCellTests: XCTestCase {
     }
     
     func test_config_cell_sets_account_name_label() {
-        cell.configCell(with: Bank(isSample: true))
-        XCTAssertEqual(cell.accountNameLabel.text, "Foo Bank")
+        cell.configCell(with: Account(isSample: true))
+        XCTAssertEqual(cell.accountNameLabel.text, "Foo Account")
     }
     
     func test_config_cell_sets_amount_label() {
-        cell.configCell(with: Bank(isSample: true))
-        XCTAssertEqual(cell.amountLabel.text, "100.0")
+        cell.configCell(with: Account(isSample: true))
+        XCTAssertEqual(cell.amountLabel.text, "$100.00")
     }
 
 }
 
-extension BankTableViewCellTests {
+extension AccountTableViewCellTests {
     class FakeDataSource: NSObject, UITableViewDataSource {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

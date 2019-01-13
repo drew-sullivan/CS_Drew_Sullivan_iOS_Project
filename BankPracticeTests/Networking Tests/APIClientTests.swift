@@ -28,45 +28,45 @@ class APIClientTests: XCTestCase {
     }
     
     func test_client_uses_expected_host() {
-        let completion = { (banks: [Bank]?, error: Error?) in }
+        let completion = { (accounts: [Account]?, error: Error?) in }
         let requestedData = RequestedData.listAccounts
-        sut.fetchBankData(with: requestedData, completion: completion)
+        sut.fetchAccountData(with: requestedData, completion: completion)
         XCTAssertEqual(mockURLSession.urlComponents?.host, "glacial-bayou-77287.herokuapp.com")
     }
     
     func test_client_uses_expected_path() {
-        let completion = { (banks: [Bank]?, error: Error?) in }
+        let completion = { (accounts: [Account]?, error: Error?) in }
         let requestedData = RequestedData.listAccounts
-        sut.fetchBankData(with: requestedData, completion: completion)
+        sut.fetchAccountData(with: requestedData, completion: completion)
         XCTAssertEqual(mockURLSession.urlComponents?.path, "/listAccounts")
     }
     
-    func test_fetch_bank_data_when_successful_returns_list_of_banks() {
+    func test_fetch_account_data_when_successful_returns_list_of_accounts() {
         let fakeJSONData = "[{\"name\": \"Royal Bank of Canada\", \"amount\" : 60032346.70, \"ROI\": 13.2, \"id\": 1},{\"name\": \"Offshore - Cayman Islands\",\"amount\" : 232393256.23, \"ROI\": 8.2, \"id\": 2}]".data(using: .utf8)
         mockURLSession = MockURLSession(data: fakeJSONData, urlResponse: nil, error: nil)
         sut.session = mockURLSession
         
-        let bankListExpectation = expectation(description: "[Bank]")
-        var caughtBanks: [Bank]?
+        let accountListExpectation = expectation(description: "[Account]")
+        var caughtAccounts: [Account]?
         
-        sut.fetchBankData(with: .listAccounts) { (banks, _) in
-            caughtBanks = banks
-            bankListExpectation.fulfill()
+        sut.fetchAccountData(with: .listAccounts) { (accounts, _) in
+            caughtAccounts = accounts
+            accountListExpectation.fulfill()
         }
         
         waitForExpectations(timeout: 1) { _ in
-            XCTAssertEqual(caughtBanks?.count, 2)
+            XCTAssertEqual(caughtAccounts?.count, 2)
         }
     }
     
-    func test_fetch_bank_data_when_data_is_nil_returns_error() {
+    func test_fetch_account_data_when_data_is_nil_returns_error() {
         mockURLSession = MockURLSession(data: nil, urlResponse: nil, error: nil)
         sut.session = mockURLSession
         
         let errorExpectation = expectation(description: "error")
         var caughtError: Error?
         
-        sut.fetchBankData(with: .listAccounts) { (_, error) in
+        sut.fetchAccountData(with: .listAccounts) { (_, error) in
             caughtError = error
             errorExpectation.fulfill()
         }
@@ -76,7 +76,7 @@ class APIClientTests: XCTestCase {
         }
     }
     
-    func test_fetch_bank_data_when_json_is_invalid_returns_error() {
+    func test_fetch_account_data_when_json_is_invalid_returns_error() {
         let badJSONData = "[{\"amount\" : 60032346.70, \"ROI\": 13.2, \"id\": 1},{\"name\": \"Offshore - Cayman Islands\",\"amount\" : 232393256.23, \"ROI\": 8.2, \"id\": 2}]".data(using: .utf8)
         mockURLSession = MockURLSession(data: badJSONData, urlResponse: nil, error: nil)
         sut.session = mockURLSession
@@ -84,7 +84,7 @@ class APIClientTests: XCTestCase {
         let errorExpectation = expectation(description: "error")
         var caughtError: Error?
         
-        sut.fetchBankData(with: .listAccounts) { (_, error) in
+        sut.fetchAccountData(with: .listAccounts) { (_, error) in
             caughtError = error
             errorExpectation.fulfill()
         }
@@ -94,7 +94,7 @@ class APIClientTests: XCTestCase {
         }
     }
     
-    func test_fetch_bank_data_when_response_had_error_returns_error() {
+    func test_fetch_account_data_when_response_had_error_returns_error() {
         let fakeJSONData = "[{\"name\": \"Royal Bank of Canada\", \"amount\" : 60032346.70, \"ROI\": 13.2, \"id\": 1},{\"name\": \"Offshore - Cayman Islands\",\"amount\" : 232393256.23, \"ROI\": 8.2, \"id\": 2}]".data(using: .utf8)
         let error = NSError(domain: "FakeDomain", code: 1234, userInfo: nil)
         mockURLSession = MockURLSession(data: fakeJSONData, urlResponse: nil, error: error)
@@ -103,7 +103,7 @@ class APIClientTests: XCTestCase {
         let errorExpectation = expectation(description: "error")
         var caughtError: Error?
         
-        sut.fetchBankData(with: .listAccounts) { (_, error) in
+        sut.fetchAccountData(with: .listAccounts) { (_, error) in
             caughtError = error
             errorExpectation.fulfill()
         }

@@ -9,11 +9,12 @@
 import UIKit
 import Foundation
 
-class BankCellViewModel {
-    private let bank: Bank
+class AccountCellViewModel {
     
-    public init(bank: Bank) {
-        self.bank = bank
+    private let account: Account
+    
+    public init(account: Account) {
+        self.account = account
     }
     
     public var formattedAmount: String {
@@ -21,7 +22,7 @@ class BankCellViewModel {
         nf.numberStyle = .currency
         nf.minimumFractionDigits = 2
         nf.maximumFractionDigits = 2
-        if let formattedAmount = nf.string(from: bank.amount as NSNumber) {
+        if let formattedAmount = nf.string(from: account.amount as NSNumber) {
             return formattedAmount
         } else {
             return "N/A"

@@ -10,20 +10,20 @@ import XCTest
 
 @testable import BankPractice
 
-class BankListDataProviderTests: XCTestCase {
+class AccountListDataProviderTests: XCTestCase {
     
-    var controller: BankListViewController!
-    var sut: BankListDataProvider!
+    var controller: AccountListViewController!
+    var sut: AccountListDataProvider!
     var tableView: UITableView!
 
     override func setUp() {
         super.setUp()
         
-        sut = BankListDataProvider()
-        sut.bankDataManager = BankDataManager.shared
+        sut = AccountListDataProvider()
+        sut.accountDataManager = AccountDataManager.shared
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        controller = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as? BankListViewController
+        controller = storyboard.instantiateViewController(withIdentifier: "AccountListViewController") as? AccountListViewController
         
         controller.loadViewIfNeeded()
 
@@ -32,7 +32,7 @@ class BankListDataProviderTests: XCTestCase {
     }
 
     override func tearDown() {
-        BankDataManager.shared.clear()
+        AccountDataManager.shared.clear()
         
         super.tearDown()
     }
@@ -41,30 +41,30 @@ class BankListDataProviderTests: XCTestCase {
         XCTAssertEqual(tableView.numberOfSections, 1)
     }
     
-    func test_number_of_rows_in_section_one_is_equal_to_num_banks() {
-        sut.bankDataManager?.add(Bank(isSample: true))
+    func test_number_of_rows_in_section_one_is_equal_to_num_accounts() {
+        sut.accountDataManager?.add(Account(isSample: true))
         tableView.reloadData()
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
         
-        sut.bankDataManager?.add(Bank(isSample: true))
+        sut.accountDataManager?.add(Account(isSample: true))
         tableView.reloadData()
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 2)
     }
     
-    func test_cell_for_row_at_returns_bank_cell() {
-        sut.bankDataManager?.add(Bank(isSample: true))
+    func test_cell_for_row_at_returns_account_cell() {
+        sut.accountDataManager?.add(Account(isSample: true))
         tableView.reloadData()
         
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
-        XCTAssertTrue(cell is BankTableViewCell)
+        XCTAssertTrue(cell is AccountTableViewCell)
     }
     
     func test_cell_for_row_dequeues_cell_from_table_view() {
         let mockTableView = MockTableView()
         mockTableView.dataSource = sut
-        mockTableView.register(MockBankCell.self, forCellReuseIdentifier: "BankTableViewCell")
+        mockTableView.register(MockAccountCell.self, forCellReuseIdentifier: "AccountTableViewCell")
 
-        sut.bankDataManager?.add(Bank(isSample: true))
+        sut.accountDataManager?.add(Account(isSample: true))
         mockTableView.reloadData()
 
         let _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
@@ -75,26 +75,26 @@ class BankListDataProviderTests: XCTestCase {
     func test_cell_for_row_at_calls_config_cell() {
         let mockTableView = MockTableView()
         mockTableView.dataSource = sut
-        mockTableView.register(MockBankCell.self, forCellReuseIdentifier: "BankTableViewCell")
+        mockTableView.register(MockAccountCell.self, forCellReuseIdentifier: "AccountTableViewCell")
         
-        let bank = Bank(isSample: true)
-        sut.bankDataManager?.add(bank)
+        let account = Account(isSample: true)
+        sut.accountDataManager?.add(account)
         mockTableView.reloadData()
         
-        let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MockBankCell
+        let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as! MockAccountCell
         
-        if let testBank = cell.caughtBank {
-            XCTAssertEqual(testBank, bank)
+        if let testAccount = cell.caughtAccount {
+            XCTAssertEqual(testAccount, account)
         } else {
             XCTFail()
         }
     }
     
     func test_selecting_a_cell_sends_notification() {
-        let bank = Bank(isSample: true)
-        sut.bankDataManager?.add(bank)
+        let account = Account(isSample: true)
+        sut.accountDataManager?.add(account)
         
-        expectation(forNotification: NSNotification.Name(rawValue: "BankSelectedNotification"), object: nil) { (notification) -> Bool in
+        expectation(forNotification: NSNotification.Name(rawValue: "AccountSelectedNotification"), object: nil) { (notification) -> Bool in
             guard let index = notification.userInfo?["index"] as? Int else { return false }
             return index == 0
         }
@@ -106,7 +106,7 @@ class BankListDataProviderTests: XCTestCase {
 
 }
 
-extension BankListDataProviderTests {
+extension AccountListDataProviderTests {
     
     class MockTableView: UITableView {
         var cellWasDequeued = false
@@ -123,11 +123,11 @@ extension BankListDataProviderTests {
         }
     }
     
-    class MockBankCell: BankTableViewCell {
-        var caughtBank: Bank?
+    class MockAccountCell: AccountTableViewCell {
+        var caughtAccount: Account?
         
-        override func configCell(with bank: Bank) {
-            caughtBank = bank
+        override func configCell(with account: Account) {
+            caughtAccount = account
         }
     }
     
