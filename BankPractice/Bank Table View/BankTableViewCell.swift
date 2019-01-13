@@ -12,7 +12,7 @@ class BankTableViewCell: UITableViewCell {
     
     @IBOutlet var accountNameLabel: UILabel!
     @IBOutlet var amountLabel: UILabel!
-    
+        
     func configCell(with bank: Bank) {
         accountNameLabel.text = bank.name
         amountLabel.text = "\(bank.amount)"

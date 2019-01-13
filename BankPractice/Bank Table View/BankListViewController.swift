@@ -22,6 +22,9 @@ class BankListViewController: UIViewController {
         tableView.delegate = dataProvider
         
         dataProvider.bankDataManager = bankDataManager
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
     override func viewWillAppear(_ animated: Bool) {
