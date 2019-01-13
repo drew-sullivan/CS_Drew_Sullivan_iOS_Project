@@ -24,7 +24,7 @@ public struct Account: Equatable, Codable {
     init(isSample: Bool) {
         self.name = "Foo Account"
         self.amount = 100.0
-        self.ROI = 99.0
+        self.ROI = 9.9
         self.id = 1
     }
     

@@ -22,7 +22,16 @@ class AccountDetailViewModel {
     }
     
     public var roi: String {
-        return "\(account.ROI)"
+        let nf = NumberFormatter()
+        nf.numberStyle = NumberFormatter.Style.percent
+        nf.multiplier = 1
+        nf.minimumFractionDigits = 0
+        nf.maximumFractionDigits = 2
+        if let formattedPercentage = nf.string(from: (account.ROI as NSNumber)) {
+            return formattedPercentage
+        } else {
+            return "Error"
+        }
     }
     
     public var backgroundColorBasedOnROI: UIColor {

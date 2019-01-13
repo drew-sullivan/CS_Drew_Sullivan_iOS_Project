@@ -43,5 +43,11 @@ class AccountDetailViewModelTests: XCTestCase {
         let sut = AccountDetailViewModel(account: account)
         XCTAssertEqual(sut.backgroundColorBasedOnROI, UIColor.red)
     }
+    
+    func test_roi_is_formatted_correctly() {
+        let account = Account(isSample: true)
+        let sut = AccountDetailViewModel(account: account)
+        XCTAssertEqual(sut.roi, "9.9%")
+    }
 
 }
