@@ -41,7 +41,7 @@ class AccountDetailViewControllerTests: XCTestCase {
     }
     
     func test_setting_account_info_sets_label_text() {
-       XCTAssertEqual(sut.roiLabel.text, "\(account.ROI)")
+       XCTAssertEqual(sut.roiLabel.text, "9.9%")
     }
 
 }
