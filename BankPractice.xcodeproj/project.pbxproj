@@ -10,6 +10,8 @@
 		3A20D6BD21EA2AC00018CC73 /* BankTableViewCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */; };
 		3A20D6C721EA33900018CC73 /* BankDetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20D6C621EA33900018CC73 /* BankDetailViewControllerTests.swift */; };
 		3A20D6C921EA33A70018CC73 /* BankDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A20D6C821EA33A70018CC73 /* BankDetailViewController.swift */; };
+		3A3BAC9321EBB4F200BA062D /* BankCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3BAC9221EBB4F200BA062D /* BankCellViewModel.swift */; };
+		3A3BAC9521EBB7A400BA062D /* BankCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3BAC9421EBB7A400BA062D /* BankCellViewModelTests.swift */; };
 		3ACB9F3B21EA3F3600C0AA36 /* BankDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB9F3A21EA3F3600C0AA36 /* BankDetailViewModelTests.swift */; };
 		3ACB9F3D21EA40D100C0AA36 /* BankDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB9F3C21EA40D100C0AA36 /* BankDetailViewModel.swift */; };
 		3ACB9F3F21EA490F00C0AA36 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACB9F3E21EA490F00C0AA36 /* APIClientTests.swift */; };
@@ -51,6 +53,8 @@
 		3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTableViewCellTests.swift; sourceTree = "<group>"; };
 		3A20D6C621EA33900018CC73 /* BankDetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewControllerTests.swift; sourceTree = "<group>"; };
 		3A20D6C821EA33A70018CC73 /* BankDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewController.swift; sourceTree = "<group>"; };
+		3A3BAC9221EBB4F200BA062D /* BankCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCellViewModel.swift; sourceTree = "<group>"; };
+		3A3BAC9421EBB7A400BA062D /* BankCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCellViewModelTests.swift; sourceTree = "<group>"; };
 		3ACB9F3A21EA3F3600C0AA36 /* BankDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewModelTests.swift; sourceTree = "<group>"; };
 		3ACB9F3C21EA40D100C0AA36 /* BankDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailViewModel.swift; sourceTree = "<group>"; };
 		3ACB9F3E21EA490F00C0AA36 /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				7CE0E83521E922BD00B44981 /* BankListViewController.swift */,
 				7CE0E83921E92B9A00B44981 /* BankListDataProvider.swift */,
 				7C5D9BE221E93BEB00A24621 /* BankTableViewCell.swift */,
+				3A3BAC9221EBB4F200BA062D /* BankCellViewModel.swift */,
 			);
 			path = "Bank Table View";
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 				7CE0E83321E9225300B44981 /* BankListViewControllerTests.swift */,
 				7CBFA70821E93532007F49C0 /* BankListDataProviderTests.swift */,
 				3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */,
+				3A3BAC9421EBB7A400BA062D /* BankCellViewModelTests.swift */,
 			);
 			path = "Bank Table View Tests";
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A3BAC9321EBB4F200BA062D /* BankCellViewModel.swift in Sources */,
 				7CE0E83621E922BD00B44981 /* BankListViewController.swift in Sources */,
 				7CE0E83021E9200B00B44981 /* Bank.swift in Sources */,
 				7CBFA70521E93303007F49C0 /* BankDataManager.swift in Sources */,
@@ -405,6 +412,7 @@
 				3A20D6C721EA33900018CC73 /* BankDetailViewControllerTests.swift in Sources */,
 				3ACB9F3B21EA3F3600C0AA36 /* BankDetailViewModelTests.swift in Sources */,
 				7CBFA70921E93532007F49C0 /* BankListDataProviderTests.swift in Sources */,
+				3A3BAC9521EBB7A400BA062D /* BankCellViewModelTests.swift in Sources */,
 				3ACB9F3F21EA490F00C0AA36 /* APIClientTests.swift in Sources */,
 				3AD96C1621EB7766008C06DC /* StoryboardTests.swift in Sources */,
 				3A20D6BD21EA2AC00018CC73 /* BankTableViewCellTests.swift in Sources */,

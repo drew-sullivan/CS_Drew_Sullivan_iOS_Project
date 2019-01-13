@@ -14,7 +14,8 @@ class BankTableViewCell: UITableViewCell {
     @IBOutlet var amountLabel: UILabel!
         
     func configCell(with bank: Bank) {
+        let bankCellViewModel = BankCellViewModel(bank: bank)
         accountNameLabel.text = bank.name
-        amountLabel.text = "\(bank.amount)"
+        amountLabel.text = bankCellViewModel.formattedAmount
     }
 }
