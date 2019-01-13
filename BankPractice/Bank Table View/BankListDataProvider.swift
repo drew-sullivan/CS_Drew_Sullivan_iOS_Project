@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate {
+class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate, BankDataManagerSettable {
     
     public var bankDataManager: BankDataManager?
     
@@ -32,4 +32,8 @@ class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate
         return 1
     }
     
+}
+
+@objc protocol BankDataManagerSettable {
+    var bankDataManager: BankDataManager? { get set }
 }

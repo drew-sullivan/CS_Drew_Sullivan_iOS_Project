@@ -108,18 +108,17 @@
 				7CE0E83521E922BD00B44981 /* BankListViewController.swift */,
 				7CE0E83921E92B9A00B44981 /* BankListDataProvider.swift */,
 				7C5D9BE221E93BEB00A24621 /* BankTableViewCell.swift */,
-				3A20D6C521EA32C80018CC73 /* Bank Details */,
 			);
 			path = "Bank Table View";
 			sourceTree = "<group>";
 		};
-		3A20D6C521EA32C80018CC73 /* Bank Details */ = {
+		3A20D6C521EA32C80018CC73 /* Bank Detail */ = {
 			isa = PBXGroup;
 			children = (
 				3A20D6C821EA33A70018CC73 /* BankDetailViewController.swift */,
 				3ACB9F3C21EA40D100C0AA36 /* BankDetailViewModel.swift */,
 			);
-			path = "Bank Details";
+			path = "Bank Detail";
 			sourceTree = "<group>";
 		};
 		3ACB9F4021EA497000C0AA36 /* Networking */ = {
@@ -136,6 +135,49 @@
 				7CE0E83D21E9304100B44981 /* BankDataManager.swift */,
 			);
 			path = "Data Management";
+			sourceTree = "<group>";
+		};
+		3AE6138221EB7E0200713A90 /* Bank Table View Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7CE0E83321E9225300B44981 /* BankListViewControllerTests.swift */,
+				7CBFA70821E93532007F49C0 /* BankListDataProviderTests.swift */,
+				3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */,
+			);
+			path = "Bank Table View Tests";
+			sourceTree = "<group>";
+		};
+		3AE6138321EB7E1700713A90 /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7CE0E82D21E91FC400B44981 /* BankTests.swift */,
+			);
+			path = "Model Tests";
+			sourceTree = "<group>";
+		};
+		3AE6138421EB7E3100713A90 /* Bank Detail Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3A20D6C621EA33900018CC73 /* BankDetailViewControllerTests.swift */,
+				3ACB9F3A21EA3F3600C0AA36 /* BankDetailViewModelTests.swift */,
+			);
+			path = "Bank Detail Tests";
+			sourceTree = "<group>";
+		};
+		3AE6138521EB7E5000713A90 /* Networking Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3ACB9F3E21EA490F00C0AA36 /* APIClientTests.swift */,
+			);
+			path = "Networking Tests";
+			sourceTree = "<group>";
+		};
+		3AE6138621EB7E5700713A90 /* Storyboard Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3AD96C1521EB7766008C06DC /* StoryboardTests.swift */,
+			);
+			path = "Storyboard Tests";
 			sourceTree = "<group>";
 		};
 		7CE0E7F321E91F3900B44981 = {
@@ -166,6 +208,7 @@
 				7CE0E83221E921E700B44981 /* Storyboards */,
 				7CE0E83121E921AA00B44981 /* Model */,
 				3A20D6BE21EA316E0018CC73 /* Bank Table View */,
+				3A20D6C521EA32C80018CC73 /* Bank Detail */,
 				7CE0E7FF21E91F3900B44981 /* AppDelegate.swift */,
 				7CE0E80621E91F3A00B44981 /* Assets.xcassets */,
 				7CE0E80B21E91F3A00B44981 /* Info.plist */,
@@ -176,15 +219,12 @@
 		7CE0E81321E91F3A00B44981 /* BankPracticeTests */ = {
 			isa = PBXGroup;
 			children = (
-				7CE0E82D21E91FC400B44981 /* BankTests.swift */,
-				7CE0E83321E9225300B44981 /* BankListViewControllerTests.swift */,
-				7CBFA70821E93532007F49C0 /* BankListDataProviderTests.swift */,
-				3A20D6BC21EA2AC00018CC73 /* BankTableViewCellTests.swift */,
-				3A20D6C621EA33900018CC73 /* BankDetailViewControllerTests.swift */,
-				3ACB9F3A21EA3F3600C0AA36 /* BankDetailViewModelTests.swift */,
-				3ACB9F3E21EA490F00C0AA36 /* APIClientTests.swift */,
+				3AE6138321EB7E1700713A90 /* Model Tests */,
+				3AE6138221EB7E0200713A90 /* Bank Table View Tests */,
+				3AE6138421EB7E3100713A90 /* Bank Detail Tests */,
+				3AE6138521EB7E5000713A90 /* Networking Tests */,
+				3AE6138621EB7E5700713A90 /* Storyboard Tests */,
 				7CE0E81621E91F3A00B44981 /* Info.plist */,
-				3AD96C1521EB7766008C06DC /* StoryboardTests.swift */,
 			);
 			path = BankPracticeTests;
 			sourceTree = "<group>";

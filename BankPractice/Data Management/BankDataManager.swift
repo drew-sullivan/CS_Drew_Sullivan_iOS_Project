@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class BankDataManager {
+public class BankDataManager: NSObject {
     
     private var banks: [Bank]
     public var numBanks: Int {
@@ -20,7 +20,7 @@ public class BankDataManager {
         return instance
     }()
     
-    private init() {
+    private override init() {
         banks = [Bank]()
     }
     

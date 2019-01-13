@@ -45,4 +45,8 @@ class BankListViewControllerTests: XCTestCase {
     func test_loading_view_data_source_is_delegate() {
         XCTAssertEqual(vc.tableView.delegate as? BankListDataProvider, vc.tableView.dataSource as? BankListDataProvider)
     }
+    
+    func test_view_did_load_sets_bank_data_manager_to_data_provider() {
+        XCTAssertTrue(vc.bankDataManager === vc.dataProvider.bankDataManager)
+    }
 }
