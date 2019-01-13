@@ -10,6 +10,7 @@ import UIKit
 
 class BankDetailViewModel {
     private let bank: Bank
+    
     public var textColor = UIColor.white
     
     public init(bank: Bank) {

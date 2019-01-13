@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct APIClient {
+class APIClient {
     
     lazy var session: SessionProtocol = URLSession.shared
     
-    mutating func fetchBankData(with requestedData: RequestedData, completion: @escaping ([Bank]?, Error?) -> Void) {
+    func fetchBankData(with requestedData: RequestedData, completion: @escaping ([Bank]?, Error?) -> Void) {
         guard let url = URL(string: "https://glacial-bayou-77287.herokuapp.com/\(requestedData)") else {
             fatalError()
         }

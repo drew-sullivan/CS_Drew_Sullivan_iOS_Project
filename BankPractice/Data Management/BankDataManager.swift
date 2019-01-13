@@ -36,4 +36,24 @@ public class BankDataManager: NSObject {
         return banks[index]
     }
     
+    public func getBanks() -> [Bank] {
+        return banks
+    }
+    
+    public func fetchBankData(completion: @escaping (Bool) -> Void) {
+        let apiClient = APIClient()
+        apiClient.fetchBankData(with: .listAccounts) { (banks, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                completion(false)
+            } else {
+                if let banks = banks {
+                    print("Bank data retrieved")
+                    self.banks = banks
+                    completion(true)
+                }
+            }
+        }
+    }
+    
 }

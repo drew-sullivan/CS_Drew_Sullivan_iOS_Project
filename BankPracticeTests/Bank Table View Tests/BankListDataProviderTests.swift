@@ -89,6 +89,20 @@ class BankListDataProviderTests: XCTestCase {
             XCTFail()
         }
     }
+    
+    func test_selecting_a_cell_sends_notification() {
+        let bank = Bank(isSample: true)
+        sut.bankDataManager?.add(bank)
+        
+        expectation(forNotification: NSNotification.Name(rawValue: "BankSelectedNotification"), object: nil) { (notification) -> Bool in
+            guard let index = notification.userInfo?["index"] as? Int else { return false }
+            return index == 0
+        }
+        
+        tableView.delegate?.tableView!(tableView, didSelectRowAt: IndexPath(row: 0, section: 0))
+        
+        waitForExpectations(timeout: 3, handler: nil)
+    }
 
 }
 
@@ -96,10 +110,16 @@ extension BankListDataProviderTests {
     
     class MockTableView: UITableView {
         var cellWasDequeued = false
+        var dataWasReloaded = false
         
         override func dequeueReusableCell(withIdentifier identifier: String, for indexPath: IndexPath) -> UITableViewCell {
             cellWasDequeued = true
             return super.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        }
+        
+        override func reloadData() {
+            dataWasReloaded = true
+            return super.reloadData()
         }
     }
     

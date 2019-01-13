@@ -32,6 +32,10 @@ class BankListDataProvider: NSObject, UITableViewDataSource, UITableViewDelegate
         return 1
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NotificationCenter.default.post(name: NSNotification.Name("BankSelectedNotification"), object: self, userInfo: ["index": indexPath.row])
+    }
+    
 }
 
 @objc protocol BankDataManagerSettable {

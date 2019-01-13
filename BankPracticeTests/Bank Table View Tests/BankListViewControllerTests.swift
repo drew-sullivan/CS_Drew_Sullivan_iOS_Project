@@ -12,14 +12,14 @@ import XCTest
 
 class BankListViewControllerTests: XCTestCase {
     
-    var vc: BankListViewController!
+    var sut: BankListViewController!
 
     override func setUp() {
         super.setUp()
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        vc = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as? BankListViewController
-        vc.loadViewIfNeeded()
+        sut = storyboard.instantiateViewController(withIdentifier: "BankListViewController") as? BankListViewController
+        sut.loadViewIfNeeded()
     }
 
     override func tearDown() {
@@ -27,26 +27,39 @@ class BankListViewControllerTests: XCTestCase {
     }
     
     func test_table_view_is_not_nil_after_viewDidLoad() {
-        XCTAssertNotNil(vc)
+        XCTAssertNotNil(sut)
     }
     
     func test_tableView_after_viewDidLoad_is_not_nil() {
-        XCTAssertNotNil(vc.tableView)
+        XCTAssertNotNil(sut.tableView)
     }
     
     func test_loading_view_sets_table_view_data_source() {
-        XCTAssertTrue(vc.tableView.dataSource is BankListDataProvider)
+        XCTAssertTrue(sut.tableView.dataSource is BankListDataProvider)
     }
     
     func test_loading_view_sets_tableView_delegate() {
-        XCTAssertTrue(vc.tableView.delegate is BankListDataProvider)
+        XCTAssertTrue(sut.tableView.delegate is BankListDataProvider)
     }
     
     func test_loading_view_data_source_is_delegate() {
-        XCTAssertEqual(vc.tableView.delegate as? BankListDataProvider, vc.tableView.dataSource as? BankListDataProvider)
+        XCTAssertEqual(sut.tableView.delegate as? BankListDataProvider, sut.tableView.dataSource as? BankListDataProvider)
     }
     
     func test_view_did_load_sets_bank_data_manager_to_data_provider() {
-        XCTAssertTrue(vc.bankDataManager === vc.dataProvider.bankDataManager)
+        XCTAssertTrue(sut.bankDataManager === sut.dataProvider.bankDataManager)
     }
+}
+
+extension BankListViewControllerTests {
+    
+    class MockNavigationController: UINavigationController {
+        var lastPushedController: UIViewController?
+        
+        override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+            lastPushedController = viewController
+            super.pushViewController(viewController, animated: animated)
+        }
+    }
+    
 }

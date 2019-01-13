@@ -24,4 +24,32 @@ class BankListViewController: UIViewController {
         dataProvider.bankDataManager = bankDataManager
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        bankDataManager.fetchBankData { (isDone) in
+            if isDone {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "BankDetailViewSegue"?:
+            if let row = tableView.indexPathForSelectedRow?.row {
+                if let bank = dataProvider.bankDataManager?.bank(at: row) {
+                    let bankDetailViewModel = BankDetailViewModel(bank: bank)
+                    let bankDetailViewController = segue.destination as! BankDetailViewController
+                    bankDetailViewController.bankDetailViewModel = bankDetailViewModel
+                }
+            }
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
+    
 }
