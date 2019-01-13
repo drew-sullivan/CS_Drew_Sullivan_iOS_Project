@@ -8,7 +8,7 @@
 
 import XCTest
 
-@testable import BankPractice
+@testable import Drew_Sullivan_CS_iOS_Project
 
 class AccountListViewControllerTests: XCTestCase {
     
